@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 import ARKit
 
-class ViewController: UIViewController, ARSKViewDelegate {
+class ShooterViewController: UIViewController, ARSKViewDelegate {
     
     @IBOutlet var sceneView: ARSKView!
     
@@ -21,7 +21,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
         sceneView.delegate = self
         
         // Load the SKScene from 'Scene.sks'
-        if let scene = SKScene(fileNamed: "Scene") {
+        if let scene = SKScene(fileNamed: "ShooterScene") {
             sceneView.presentScene(scene)
         }
     }
@@ -47,8 +47,8 @@ class ViewController: UIViewController, ARSKViewDelegate {
     
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
         // Create and configure a node for the anchor added to the view's session.
-        if (Scene.pendingEnemy) {
-            Scene.pendingEnemy = false
+        if (ShooterScene.pendingEnemy) {
+            ShooterScene.pendingEnemy = false
             return Enemy()
         } else {
             return Bullet()

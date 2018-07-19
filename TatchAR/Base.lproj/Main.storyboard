@@ -1,20 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina5_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main Menu View Controller-->
+        <scene sceneID="mBM-82-D13">
+            <objects>
+                <viewController id="f2r-Zd-CD0" customClass="MainMenuViewController" customModule="TatchAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="31j-s3-Tc0">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aQe-zG-QkH" userLabel="backgroundImage">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R2D-GU-NK7" userLabel="difficultySelectView">
+                                <rect key="frame" x="231" y="164" width="350" height="75"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJc-dM-4wj" userLabel="playButton">
+                                <rect key="frame" x="231" y="249" width="350" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="0Sp-mJ-AQ9"/>
+                                    <constraint firstAttribute="height" constant="75" id="yvn-fn-Hy2"/>
+                                </constraints>
+                                <state key="normal" title="PLAY"/>
+                                <connections>
+                                    <action selector="buttonEvent:" destination="f2r-Zd-CD0" eventType="touchUpInside" id="0fM-Sq-fLw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfT-Bm-js1" userLabel="settingsButton">
+                                <rect key="frame" x="716" y="32" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="LAg-Ww-fbt"/>
+                                    <constraint firstAttribute="width" constant="64" id="VvH-MA-maT"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonEvent:" destination="f2r-Zd-CD0" eventType="touchUpInside" id="PEn-Bc-4sK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aQe-zG-QkH" firstAttribute="top" secondItem="9WL-OF-jaz" secondAttribute="top" id="1dt-XI-Nsr"/>
+                            <constraint firstItem="oJc-dM-4wj" firstAttribute="top" secondItem="R2D-GU-NK7" secondAttribute="bottom" constant="10" id="7aJ-QO-5n3"/>
+                            <constraint firstAttribute="bottom" secondItem="aQe-zG-QkH" secondAttribute="bottom" id="EmG-Sb-QF6"/>
+                            <constraint firstAttribute="trailing" secondItem="WfT-Bm-js1" secondAttribute="trailing" constant="32" id="IrG-DW-3gw"/>
+                            <constraint firstItem="oJc-dM-4wj" firstAttribute="centerX" secondItem="aQe-zG-QkH" secondAttribute="centerX" id="JRX-Al-3IP"/>
+                            <constraint firstItem="9WL-OF-jaz" firstAttribute="bottom" secondItem="oJc-dM-4wj" secondAttribute="bottom" constant="30" id="LSb-ez-CIi"/>
+                            <constraint firstAttribute="trailing" secondItem="aQe-zG-QkH" secondAttribute="trailing" id="S8u-yq-9z5"/>
+                            <constraint firstItem="aQe-zG-QkH" firstAttribute="leading" secondItem="31j-s3-Tc0" secondAttribute="leading" id="Thz-b9-exX"/>
+                            <constraint firstItem="R2D-GU-NK7" firstAttribute="height" secondItem="oJc-dM-4wj" secondAttribute="height" id="bBs-0c-84W"/>
+                            <constraint firstItem="R2D-GU-NK7" firstAttribute="centerX" secondItem="aQe-zG-QkH" secondAttribute="centerX" id="chh-cg-Chg"/>
+                            <constraint firstItem="WfT-Bm-js1" firstAttribute="top" secondItem="9WL-OF-jaz" secondAttribute="top" constant="32" id="yI3-ez-qHd"/>
+                            <constraint firstItem="R2D-GU-NK7" firstAttribute="width" secondItem="oJc-dM-4wj" secondAttribute="width" id="zfO-Ir-0aQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9WL-OF-jaz"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="aQe-zG-QkH" id="2UP-kS-Q5l"/>
+                        <outlet property="difficultySelectView" destination="R2D-GU-NK7" id="TBQ-wz-6c9"/>
+                        <outlet property="playButtonOutlet" destination="oJc-dM-4wj" id="4AA-fE-u8T"/>
+                        <outlet property="settingsButtonOutlet" destination="WfT-Bm-js1" id="73c-LD-yzd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CP2-hI-veh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-686.45320197044339" y="32.799999999999997"/>
+        </scene>
+        <!--Shooter View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="Tatch_Shooter_AR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="ShooterViewController" customModule="TatchAR" customModuleProvider="target" sceneMemberID="viewController">
                     <arskView key="view" contentMode="scaleToFill" id="EO5-fy-WZq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </arskView>
                     <connections>

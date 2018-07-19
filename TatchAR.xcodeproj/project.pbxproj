@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		312CD6FF20FD2C5B003C1D90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312CD6FE20FD2C5B003C1D90 /* AppDelegate.swift */; };
-		312CD70120FD2C5B003C1D90 /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 312CD70020FD2C5B003C1D90 /* Scene.sks */; };
-		312CD70320FD2C5B003C1D90 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312CD70220FD2C5B003C1D90 /* Scene.swift */; };
-		312CD70520FD2C5B003C1D90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312CD70420FD2C5B003C1D90 /* ViewController.swift */; };
+		312CD70520FD2C5B003C1D90 /* ShooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312CD70420FD2C5B003C1D90 /* ShooterViewController.swift */; };
 		312CD70820FD2C5B003C1D90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 312CD70620FD2C5B003C1D90 /* Main.storyboard */; };
 		312CD70A20FD2C5E003C1D90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 312CD70920FD2C5E003C1D90 /* Assets.xcassets */; };
 		312CD70D20FD2C5E003C1D90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 312CD70B20FD2C5E003C1D90 /* LaunchScreen.storyboard */; };
 		312CD73320FD2EB5003C1D90 /* Bullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312CD73120FD2EB4003C1D90 /* Bullet.swift */; };
 		312CD73420FD2EB5003C1D90 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312CD73220FD2EB4003C1D90 /* Enemy.swift */; };
+		3140B8812100CFCC00B76698 /* ShooterScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3140B8802100CFCC00B76698 /* ShooterScene.sks */; };
+		3140B8832100CFDE00B76698 /* ShooterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3140B8822100CFDE00B76698 /* ShooterScene.swift */; };
+		3140B8882100DB5E00B76698 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3140B8872100DB5E00B76698 /* MainMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +39,7 @@
 /* Begin PBXFileReference section */
 		312CD6FB20FD2C5B003C1D90 /* TatchAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TatchAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		312CD6FE20FD2C5B003C1D90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		312CD70020FD2C5B003C1D90 /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
-		312CD70220FD2C5B003C1D90 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
-		312CD70420FD2C5B003C1D90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		312CD70420FD2C5B003C1D90 /* ShooterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShooterViewController.swift; sourceTree = "<group>"; };
 		312CD70720FD2C5B003C1D90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		312CD70920FD2C5E003C1D90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		312CD70C20FD2C5E003C1D90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,9 @@
 		312CD71E20FD2C5E003C1D90 /* TatchARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TatchARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		312CD73120FD2EB4003C1D90 /* Bullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bullet.swift; sourceTree = "<group>"; };
 		312CD73220FD2EB4003C1D90 /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		3140B8802100CFCC00B76698 /* ShooterScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ShooterScene.sks; sourceTree = "<group>"; };
+		3140B8822100CFDE00B76698 /* ShooterScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShooterScene.swift; sourceTree = "<group>"; };
+		3140B8872100DB5E00B76698 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,15 +99,12 @@
 		312CD6FD20FD2C5B003C1D90 /* TatchAR */ = {
 			isa = PBXGroup;
 			children = (
+				3140B8862100D98600B76698 /* System */,
+				3140B8852100D97700B76698 /* ShooterScene */,
 				312CD73020FD2E88003C1D90 /* Object */,
-				312CD6FE20FD2C5B003C1D90 /* AppDelegate.swift */,
-				312CD70020FD2C5B003C1D90 /* Scene.sks */,
-				312CD70220FD2C5B003C1D90 /* Scene.swift */,
-				312CD70420FD2C5B003C1D90 /* ViewController.swift */,
+				3140B8842100D96800B76698 /* View Controller */,
 				312CD70620FD2C5B003C1D90 /* Main.storyboard */,
 				312CD70920FD2C5E003C1D90 /* Assets.xcassets */,
-				312CD70B20FD2C5E003C1D90 /* LaunchScreen.storyboard */,
-				312CD70E20FD2C5E003C1D90 /* Info.plist */,
 			);
 			path = TatchAR;
 			sourceTree = "<group>";
@@ -117,6 +116,34 @@
 				312CD73220FD2EB4003C1D90 /* Enemy.swift */,
 			);
 			path = Object;
+			sourceTree = "<group>";
+		};
+		3140B8842100D96800B76698 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				312CD70420FD2C5B003C1D90 /* ShooterViewController.swift */,
+				3140B8872100DB5E00B76698 /* MainMenuViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		3140B8852100D97700B76698 /* ShooterScene */ = {
+			isa = PBXGroup;
+			children = (
+				3140B8802100CFCC00B76698 /* ShooterScene.sks */,
+				3140B8822100CFDE00B76698 /* ShooterScene.swift */,
+			);
+			path = ShooterScene;
+			sourceTree = "<group>";
+		};
+		3140B8862100D98600B76698 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				312CD6FE20FD2C5B003C1D90 /* AppDelegate.swift */,
+				312CD70E20FD2C5E003C1D90 /* Info.plist */,
+				312CD70B20FD2C5E003C1D90 /* LaunchScreen.storyboard */,
+			);
+			path = System;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,10 +250,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				312CD70120FD2C5B003C1D90 /* Scene.sks in Resources */,
 				312CD70D20FD2C5E003C1D90 /* LaunchScreen.storyboard in Resources */,
 				312CD70A20FD2C5E003C1D90 /* Assets.xcassets in Resources */,
 				312CD70820FD2C5B003C1D90 /* Main.storyboard in Resources */,
+				3140B8812100CFCC00B76698 /* ShooterScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,9 +278,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				312CD70520FD2C5B003C1D90 /* ViewController.swift in Sources */,
+				3140B8882100DB5E00B76698 /* MainMenuViewController.swift in Sources */,
+				312CD70520FD2C5B003C1D90 /* ShooterViewController.swift in Sources */,
 				312CD73420FD2EB5003C1D90 /* Enemy.swift in Sources */,
-				312CD70320FD2C5B003C1D90 /* Scene.swift in Sources */,
+				3140B8832100CFDE00B76698 /* ShooterScene.swift in Sources */,
 				312CD6FF20FD2C5B003C1D90 /* AppDelegate.swift in Sources */,
 				312CD73320FD2EB5003C1D90 /* Bullet.swift in Sources */,
 			);

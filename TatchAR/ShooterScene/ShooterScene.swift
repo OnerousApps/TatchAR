@@ -10,14 +10,15 @@ import SpriteKit
 import ARKit
 import GameplayKit
 
-class Scene: SKScene, SKPhysicsContactDelegate {
+class ShooterScene: SKScene, SKPhysicsContactDelegate {
+    // MARK: Global Variables
     //Layer Nodes
     private var backgroundNode: SKNode!
     private var enemyNode: SKNode!
     private var bulletNode: SKNode!
     private var foregroundNode: SKNode!
     
-    //Misc. Nodes
+    //UI Nodes
     private var shooterLeft: SKSpriteNode!
     private var crosshairs: SKSpriteNode!
     private var shootButton: SKSpriteNode!
@@ -29,28 +30,27 @@ class Scene: SKScene, SKPhysicsContactDelegate {
     private var enemyAnchors: [ARAnchor] = []
     private var bulletAnchors: [ARAnchor] = []
     
-    //Display & Alerts
-    private let degreeFieldOfView: CGFloat = 60
-    private var headingChangeMultiplier: CGFloat!
+    //Alerts & Score
     private var leftArrowOn: Bool = false
     private var rightArrowOn: Bool = false
+    private var currentScore: Int!
     
     //Shoot pixel Offset
     private let shootPixelOffset: CGFloat = 20
     
     //Shooting & Enemy CodeCode
     private var hasShot: Bool = false
-    private var bulletSpeed: CGFloat = 10 // Inverse pixels per update
     private var enemyRespawnRate: CGFloat = 5 // Seconds
-    private var enemyRespawnCounter: CGFloat = 0
+    private var enemyRespawnCounter: Int = 0
     private let enemyDistanceFromCamera: Float = 5 //In Meters
     private let bulletRemovalDistance: Float = 20 //In Meters
-    
-    private var currentScore: Int!
     
     //Delegate Code
     public static var pendingEnemy: Bool = false
     
+    
+    
+    // MARK: Begin of Functions
     override func didMove(to view: SKView) {
         //Point the Layer Node variables to their visible counterparts
         backgroundNode = self.childNode(withName: "Background")
@@ -65,15 +65,14 @@ class Scene: SKScene, SKPhysicsContactDelegate {
         arrowRight = foregroundNode?.childNode(withName: "arrowRight") as? SKSpriteNode
         
         scoreLabel = foregroundNode?.childNode(withName: "score") as? SKLabelNode
-        
         scoreLabel.fontName = "Courier Bold"
         
+        //Initialize Variables and Set Delegates
         arrowLeft?.isHidden = true
         arrowRight?.isHidden = true
+        currentScore = 0
         
         physicsWorld.contactDelegate = self
-        
-        currentScore = 0
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -84,6 +83,7 @@ class Scene: SKScene, SKPhysicsContactDelegate {
         // // // // // // // // // // // // // // // // // // // // // // // //
         //  MOVE BULLETS & ENEMIES
         // // // // // // // // // // // // // // // // // // // // // // // //
+        
         var bulletAnchorIndecesToRemove: [Int] = []
         
         if (bulletAnchors.count > 0) {
@@ -144,6 +144,9 @@ class Scene: SKScene, SKPhysicsContactDelegate {
         scoreLabel.text = "Score: \(currentScore!)"
     }
     
+    
+    
+    // MARK: Touch Recognizer Code
     func touchDown(atPoint pos : CGPoint) {
         if (shootButton?.contains(pos))! {
             shootButton?.texture = SKTexture(imageNamed: "buttonPressed")
@@ -180,8 +183,11 @@ class Scene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    
+    
+    // MARK: Enemy and Bullet Spawning and Animations
     func addEnemy() {
-        Scene.pendingEnemy = true
+        ShooterScene.pendingEnemy = true
         
         guard let sceneView = self.view as? ARSKView else {
             return
@@ -246,6 +252,8 @@ class Scene: SKScene, SKPhysicsContactDelegate {
             bulletAnchors[anchorIndex] = anchor
         }
     }
+    
+    
     
     func didBegin(_ contact: SKPhysicsContact) {
         guard let sceneView = self.view as? ARSKView else {
