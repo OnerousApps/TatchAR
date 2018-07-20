@@ -102,7 +102,8 @@
 				3140B8862100D98600B76698 /* System */,
 				3140B8852100D97700B76698 /* ShooterScene */,
 				312CD73020FD2E88003C1D90 /* Object */,
-				3140B8842100D96800B76698 /* View Controller */,
+				3140B8842100D96800B76698 /* View */,
+				312CD70E20FD2C5E003C1D90 /* Info.plist */,
 				312CD70620FD2C5B003C1D90 /* Main.storyboard */,
 				312CD70920FD2C5E003C1D90 /* Assets.xcassets */,
 			);
@@ -118,13 +119,13 @@
 			path = Object;
 			sourceTree = "<group>";
 		};
-		3140B8842100D96800B76698 /* View Controller */ = {
+		3140B8842100D96800B76698 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				312CD70420FD2C5B003C1D90 /* ShooterViewController.swift */,
 				3140B8872100DB5E00B76698 /* MainMenuViewController.swift */,
 			);
-			path = "View Controller";
+			path = View;
 			sourceTree = "<group>";
 		};
 		3140B8852100D97700B76698 /* ShooterScene */ = {
@@ -140,7 +141,6 @@
 			isa = PBXGroup;
 			children = (
 				312CD6FE20FD2C5B003C1D90 /* AppDelegate.swift */,
-				312CD70E20FD2C5E003C1D90 /* Info.plist */,
 				312CD70B20FD2C5E003C1D90 /* LaunchScreen.storyboard */,
 			);
 			path = System;

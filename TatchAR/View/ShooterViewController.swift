@@ -14,6 +14,8 @@ class ShooterViewController: UIViewController, ARSKViewDelegate {
     
     @IBOutlet var sceneView: ARSKView!
     
+    public var difficulty: Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
