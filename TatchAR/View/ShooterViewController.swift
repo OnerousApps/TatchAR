@@ -23,8 +23,10 @@ class ShooterViewController: UIViewController, ARSKViewDelegate {
         sceneView.delegate = self
         
         // Load the SKScene from 'Scene.sks'
-        if let scene = SKScene(fileNamed: "ShooterScene") {
+        if let scene = ShooterScene(fileNamed: "ShooterScene") {
             sceneView.presentScene(scene)
+            
+            ShooterScene.difficulty = difficulty
         }
     }
     

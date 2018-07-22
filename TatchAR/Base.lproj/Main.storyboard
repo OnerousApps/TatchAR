@@ -22,17 +22,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <button opaque="NO" alpha="0.5" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfT-Bm-js1" userLabel="settingsButton">
-                                <rect key="frame" x="716" y="32" width="64" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="LAg-Ww-fbt"/>
-                                    <constraint firstAttribute="width" constant="64" id="VvH-MA-maT"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="settingsIcon"/>
-                                <connections>
-                                    <action selector="buttonEvent:" destination="f2r-Zd-CD0" eventType="touchUpInside" id="PEn-Bc-4sK"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSA-mT-8UQ">
                                 <rect key="frame" x="228.66666666666663" y="194" width="355" height="75"/>
                                 <subviews>
@@ -86,62 +75,62 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RxL-0B-9rD" userLabel="difficultyButton1">
+                                    <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RxL-0B-9rD" userLabel="difficultyButton1">
                                         <rect key="frame" x="5" y="5" width="65" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="65" id="D6Y-Cj-lqy"/>
                                             <constraint firstAttribute="height" constant="50" id="Wxp-YV-2fJ"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Button" image="Numbers0"/>
                                         <connections>
                                             <action selector="difficultyButtonEvent:" destination="f2r-Zd-CD0" eventType="touchUpInside" id="XXD-zQ-36W"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csT-Uf-3xN" userLabel="difficultyButton2">
+                                    <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csT-Uf-3xN" userLabel="difficultyButton2">
                                         <rect key="frame" x="75.000000000000028" y="5" width="65" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="HFi-uN-DZz"/>
                                             <constraint firstAttribute="width" constant="65" id="Yzx-p4-lsw"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Button" image="Numbers1"/>
                                         <connections>
                                             <action selector="difficultyButtonEvent:" destination="f2r-Zd-CD0" eventType="touchUpInside" id="qPX-33-tOq"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Dd-Cq-Xv8" userLabel="difficultyButton3">
+                                    <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Dd-Cq-Xv8" userLabel="difficultyButton3">
                                         <rect key="frame" x="145.00000000000003" y="5" width="65" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="65" id="JDM-Fp-pt4"/>
                                             <constraint firstAttribute="height" constant="50" id="s24-IE-qdP"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Button" image="Numbers2"/>
                                         <connections>
                                             <action selector="difficultyButtonEvent:" destination="f2r-Zd-CD0" eventType="touchUpInside" id="S3M-fR-qBC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmd-aH-fsJ" userLabel="difficultyButton4">
+                                    <button opaque="NO" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmd-aH-fsJ" userLabel="difficultyButton4">
                                         <rect key="frame" x="215.00000000000003" y="5" width="64.999999999999972" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="65" id="Jna-pI-cdi"/>
                                             <constraint firstAttribute="height" constant="50" id="aJf-67-YvW"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Button" image="Numbers3"/>
                                         <connections>
                                             <action selector="difficultyButtonEvent:" destination="f2r-Zd-CD0" eventType="touchUpInside" id="rCe-UI-GPr"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eb5-cJ-fzP" userLabel="difficultyButton5">
+                                    <button opaque="NO" tag="5" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eb5-cJ-fzP" userLabel="difficultyButton5">
                                         <rect key="frame" x="285" y="5" width="65" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="OOX-ht-PQF"/>
                                             <constraint firstAttribute="width" constant="65" id="bXb-Rl-A0G"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Button" image="Numbers4"/>
                                         <connections>
                                             <action selector="difficultyButtonEvent:" destination="f2r-Zd-CD0" eventType="touchUpInside" id="akY-Sd-d0j"/>
                                         </connections>
@@ -178,15 +167,26 @@
                                     <constraint firstItem="O91-5E-huu" firstAttribute="width" secondItem="5Dd-Cq-Xv8" secondAttribute="width" id="zBo-ir-x7z"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJc-dM-4wj" userLabel="playButton">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJc-dM-4wj" userLabel="playButton">
                                 <rect key="frame" x="231" y="279" width="350" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="0Sp-mJ-AQ9"/>
                                     <constraint firstAttribute="height" constant="75" id="yvn-fn-Hy2"/>
                                 </constraints>
-                                <state key="normal" title="PLAY"/>
+                                <state key="normal" image="play"/>
                                 <connections>
                                     <action selector="buttonEvent:" destination="f2r-Zd-CD0" eventType="touchUpInside" id="0fM-Sq-fLw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfT-Bm-js1" userLabel="settingsButton">
+                                <rect key="frame" x="732" y="32" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="BhZ-Kr-e3y"/>
+                                    <constraint firstAttribute="width" constant="48" id="Z8M-YK-Vla"/>
+                                </constraints>
+                                <state key="normal" image="Settings Cog"/>
+                                <connections>
+                                    <action selector="buttonEvent:" destination="f2r-Zd-CD0" eventType="touchUpInside" id="PEn-Bc-4sK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -244,7 +244,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="settingsIcon" width="128" height="128"/>
+        <image name="Numbers0" width="128" height="128"/>
+        <image name="Numbers1" width="128" height="128"/>
+        <image name="Numbers2" width="128" height="128"/>
+        <image name="Numbers3" width="128" height="128"/>
+        <image name="Numbers4" width="128" height="128"/>
+        <image name="Settings Cog" width="144" height="144"/>
+        <image name="play" width="512" height="128"/>
         <image name="tatchBackground" width="812" height="375"/>
     </resources>
 </document>

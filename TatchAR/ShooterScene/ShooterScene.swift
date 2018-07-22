@@ -38,16 +38,21 @@ class ShooterScene: SKScene, SKPhysicsContactDelegate {
     //Shoot pixel Offset
     private let shootPixelOffset: CGFloat = 20
     
-    //Shooting & Enemy CodeCode
+    //Shooting & Enemy Vars
     private var hasShot: Bool = false
     private var enemyRespawnRate: CGFloat = 5 // Seconds
-    private var enemyRespawnCounter: Int = 0
     private let enemyDistanceFromCamera: Float = 5 //In Meters
     private let bulletRemovalDistance: Float = 20 //In Meters
     
-    //Delegate Code
-    public static var pendingEnemy: Bool = false
+    //Respawn Vars
+    private let baseRespawnTimer: CGFloat = 300 //Frames
+    private let difficultyRespawnTimerModifiers: [CGFloat] = [0, 60, 120, 180, 240] //Subtracted from the base!
+    private var enemyRespawnTimer: CGFloat!
+    private var spawningCounter: CGFloat!
     
+    //Delegate and Pass-though Code
+    public static var pendingEnemy: Bool = false
+    public static var difficulty: Int!
     
     
     // MARK: Begin of Functions
@@ -71,6 +76,10 @@ class ShooterScene: SKScene, SKPhysicsContactDelegate {
         arrowLeft?.isHidden = true
         arrowRight?.isHidden = true
         currentScore = 0
+        
+        //Respawning difficulty-dependant code
+        spawningCounter = 0
+        enemyRespawnTimer = baseRespawnTimer - difficultyRespawnTimerModifiers[ShooterScene.difficulty]
         
         physicsWorld.contactDelegate = self
     }
@@ -108,12 +117,12 @@ class ShooterScene: SKScene, SKPhysicsContactDelegate {
         //  RESPAWN ENEMIES
         // // // // // // // // // // // // // // // // // // // // // // // //
         
-        if (enemyRespawnCounter >= 300) {
+        if (spawningCounter >= enemyRespawnTimer) {
             addEnemy();
-            enemyRespawnCounter = 0
+            spawningCounter = 0
         }
         
-        enemyRespawnCounter += 1
+        spawningCounter += 1
         
         
         
